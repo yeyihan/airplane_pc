@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="四川蜀讯科技有限公司" />
+		<meta name="copyright" content="wwww.scshux.com" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>订单信息(无人机)</title>
+		
+		<!--页面样式 star-->
+		<link rel="stylesheet" type="text/css" href="../assets/css/ljk.css"/>
+		<!--页面样式 end-->
+		
+		<!--公共 js star-->
+		<script src="../assets/libs/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--公共 js end-->
+		<!--第三方插件star-->
+		<script src="../assets/libs/superslide/jquery.superslide.js" type="text/javascript" charset="utf-8"></script>
+		<!--第三方插件end-->
+		<script src="../assets/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body id="order_detail">
+		<!--头部star-->
+		<div class="w_all header_box">
+			<div class="w_con">
+				<div class="header clear">
+					<img src="../assets/images/logo.png" class="fl logo"/>
+					<ul class="header_nav fr clear" >
+						<li class="fl first_li active"><a href="#">首页</a></li>
+						<li class="fl">
+							<a href="#">无人机租赁</a>
+						</li>
+						<li class="fl">
+							<a href="#">通用航空</a>
+							<div class="child_link_box">
+								<ul>
+									<li class="link_li"><a href="">商务包机</a></li>
+									<li class="link_li"><a href="">空中游览</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="fl">
+							<a href="#">关于我们</a>
+						</li>
+						<li class="fl last_li">
+							<a href="#">手机悦飞</a>
+							<span class="hot">热</span>
+						</li>
+						<li class="fl no_border login_box">
+							<!--未登录时-->
+							<!--<a href="" class="login_btn" role="button">注册 / 登录</a>-->
+							<!--登录时-->
+							<div class="login_in">
+								<a href="#" class="">菇凉145</a>
+								<a href="#" class="login_out">退出</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--头部end-->
+		
+		<div class="w_con order_con">
+			<h4>确认订单信息</h4>
+			<div class="order_list">
+				<div class="tag">
+					收货信息
+				</div>
+				<div class="address_list order_list_con">
+					<ul>
+						<li class="on">
+							<dl>
+								<dd class="name">叶叶叶 <a href="#">删除地址</a> </dd>
+								<dd class="site"><span>四川省成都市高新区福年广场T222 525</span></dd>
+								<dd class="tel">13588594830</dd>
+							</dl>
+							<div class="icon">
+								<img src="../assets/images/1_07.png"/>
+							</div>
+						</li>
+						<li>
+							<dl>
+								<dd class="name">叶叶叶 <a href="#">删除地址</a> </dd>
+								<dd class="site"><span>四川省成都市高新区福年广场T222 525</span></dd>
+								<dd class="tel">13588594830</dd>
+							</dl>
+							<div class="icon">
+								<img src="../assets/images/1_07.png"/>
+							</div>
+						</li>
+						<li class="add_li" id="add_adderss">
+							<img src="../assets/images/add.png" alt="" />
+							<div class="fz_14 fc_6">添加地址</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="order_list">
+				<div class="tag">
+					商品信息
+				</div>
+				<div class="order_list_con">
+					<div class="plane_msg">
+						<div class="plane_msg_top">
+							星域联盟玩具商城
+						</div>
+						<div class="plane_msg_con clear">
+							<div class="fl plane_msg_con_t">
+								<img src="../assets/images/index_list1.png" class="plane_img" alt="" />
+								<div class="two_text">
+									<span class="text_ellipsis2">
+										四轴实时超清航拍遥控飞机飞行器儿童玩具航模无人机直升机六轴
+									</span>
+								</div>
+							</div>
+							<div class="fr">
+								<div class="fl plane_msg_con_item">
+									<span class="fc_9 fz_12">价格</span>
+									<div class="price">￥201.00</div>
+								</div>
+								<div class="posi_lmr numbox">
+		            			    <button class="posi_l numbox_minus" type="button">-</button>
+		            			    <input class="posi_m input_num" type="text" value="1" data-min="1" data-max="9999"/>
+		            			    <button class="posi_r numbox_plus" type="button">+</button>
+		            			</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="plane_man">
+						<div class="fz_16 plane_man_t">
+							套餐：
+						</div>
+						<div class="plane_msg_con">
+							<button class="fees_btn taocan active">
+								<span>按天套餐</span>
+								<img src="../assets/images/gou.png" alt="" />
+							</button>
+							<button class="fees_btn taocan">
+								<span>按时套餐</span>
+								<img src="../assets/images/gou.png" alt="" />
+							</button>
+							<span class="tishi_box">
+								<img src="../assets/images/tishi.png" alt="" />
+								<span>按天套餐更实惠哦！</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="order_list">
+				<div class="tag">
+					<span>交付方式</span>
+					<a class="explain">
+						<span>超时收费说明</span>
+						<img src="../assets/images/ask.png"/>
+					</a>
+				</div>
+				<div class="order_list_con fc_0099ff fz_16">
+					快递
+				</div>
+			</div>
+
+			<div class="order_list">
+				<div class="tag">
+					<span>支付方式</span>
+				</div>
+				<div class="order_list_con">
+					
+					<!--有卡券时显示该数据，如果没有卡券，那么就不显示-->
+					<!--卡券star-->
+					<div class="code_box">
+						<p class="code_title">卡券</p>
+						<div class="code_list check_box">
+							<label class="radio_check on">
+								<input type="radio" name="type"/>
+								满1000减100
+							</label>
+							<label class="radio_check">
+								<input type="radio" name="type"/>
+								满2000减200
+							</label>
+						</div>
+					</div>
+					<!--卡券end-->
+					
+					<div class="code_box">
+						<div class="plane_man">
+							<div class="fz_16 plane_man_t">
+								意外保险：
+							</div>
+							<div class="plane_msg_con">
+								<button class="fees_btn baoxian active">
+									<span>￥20 意外险</span>
+									<img src="../assets/images/gou.png" alt="" />
+								</button>
+								<button class="fees_btn baoxian">
+									<span>￥3快递险</span>
+									<img src="../assets/images/gou.png" alt="" />
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="code_box">
+						<p class="code_title">买家留言：</p>
+						<ul class="code_list fc_6">
+							<textarea name="" rows="3" cols="" maxlength="50" placeholder="选填，可填写您的要求（50字以内）"></textarea>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!--提交-->
+			<div class="sub_box">
+				<span>订单总金额： <span class="fc_f00">￥51516.00</span> <span>（含保险）</span></span>
+				<button type="button" class="sub_btn">立即购买</button>
+			</div>
+		</div>
+		
+		<!--弹出框star-->
+		<div class="prop_box" id="prop_address_box">
+			<div class="prop_con" id="prop_address_con">
+				<ul>
+					<li class="prop_li fc_3">新增收货地址</li>
+					<li class="prop_li">
+						<span class="text_justify">收货人</span>
+						<input type="text" placeholder="请填写收货人姓名" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">收货地址</span>
+						<select class="select">
+							<option>省/直辖市</option>
+						</select>
+						
+						<select class="select">
+							<option>市</option>
+						</select>
+						
+						<select class="select">
+							<option>区/县</option>
+						</select>
+						
+						<select class="select">
+							<option>乡镇/街道</option>
+						</select>	
+						
+					</li>
+					<li class="prop_li">
+						<span class="text_justify"></span>
+						<input type="text" placeholder="请填写您的详细地址" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">手机号</span>
+						<input type="text" placeholder="请填写您的手机号" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">邮政编码</span>
+						<input type="text" placeholder="请填写邮政编码" />
+					</li>
+				</ul>
+				<div class="add_box">
+					<button class="add_btn" id="add_address_btn">添加</button>
+				</div>
+				
+			</div>
+		</div>
+		<!--弹出框end-->
+		
+		<!--页脚-->
+		<div class="footer w_all">
+			<div class="w_con clear">
+				<div class="fl footer_left">
+					<img src="../assets/images/logo.png" alt="" />
+					<ul class="qr_box">
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="fr clear footer_right">
+					<dl class="fl">
+						<dt>租机说明</dt>
+						<dd><a href="">服务时间</a></dd>
+						<dd><a href="">租机资格</a></dd>
+						<dd><a href="">取还机说明</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>企业服务</dt>
+						<dd><a href="">用机统计</a></dd>
+						<dd><a href="">用机人管理</a></dd>
+						<dd><a href="">企业信息</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>我的账号</dt>
+						<dd><a href="">我的行程</a></dd>
+						<dd><a href="">个人资料</a></dd>
+						<dd><a href="">常用地址</a></dd>
+						<dd><a href="">服务评价</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>关于我们</dt>
+						<dd><a href="">联系我们</a></dd>
+						<dd><a href="">计价系统</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="w_all">
+			<div class="w_con footer_b">
+				<div class="copy_box">
+					<p>蜀ICP备15015521号-2 </p>
+					<p>&copy;2009-2016 scshuxun.com All Rights Reserved.</p>
+				</div>
+				<div class="copy_img">
+					<img src="../assets/images/xin.png"/>
+					<img src="../assets/images/logo_hui.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../assets/js/check.js" ></script>
+	<script src="../assets/js/ljk.js"></script>
+	<script>
+		window.onload = function(){
+			//加减数量输入框
+			listFun.numbox();
+			//点击切换套餐
+			listFun.btnActive(".taocan");
+			//点击切换保险
+			listFun.btnActive(".baoxian");
+			//点击添加地址，弹出添加弹框
+			listFun.addAddressProp();
+		}
+	</script>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="四川蜀讯科技有限公司" />
+		<meta name="copyright" content="wwww.scshux.com" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>订单信息(通用航空)</title>
+		
+		<!--页面样式 star-->
+		<link rel="stylesheet" type="text/css" href="../assets/css/ljk.css"/>
+		<!--页面样式 end-->
+		
+		<!--公共 js star-->
+		<script src="../assets/libs/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--公共 js end-->
+		<!--第三方插件star-->
+		<script src="../assets/libs/superslide/jquery.superslide.js" type="text/javascript" charset="utf-8"></script>
+		<!--第三方插件end-->
+		<script src="../assets/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body id="order_detail">
+		<!--头部star-->
+		<div class="w_all header_box">
+			<div class="w_con">
+				<div class="header clear">
+					<img src="../assets/images/logo.png" class="fl logo"/>
+					<ul class="header_nav fr clear" >
+						<li class="fl first_li active"><a href="#">首页</a></li>
+						<li class="fl">
+							<a href="#">无人机租赁</a>
+						</li>
+						<li class="fl">
+							<a href="#">通用航空</a>
+							<div class="child_link_box">
+								<ul>
+									<li class="link_li"><a href="">商务包机</a></li>
+									<li class="link_li"><a href="">空中游览</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="fl">
+							<a href="#">关于我们</a>
+						</li>
+						<li class="fl last_li">
+							<a href="#">手机悦飞</a>
+							<span class="hot">热</span>
+						</li>
+						<li class="fl no_border login_box">
+							<!--未登录时-->
+							<!--<a href="" class="login_btn" role="button">注册 / 登录</a>-->
+							<!--登录时-->
+							<div class="login_in">
+								<a href="#" class="">菇凉145</a>
+								<a href="#" class="login_out">退出</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--头部end-->
+		
+		<div class="w_con order_con">
+			<h4>确认订单信息</h4>
+			<div class="order_list">
+				<div class="tag">
+					收货信息
+				</div>
+				<div class="address_list order_list_con">
+					<ul>
+						<li class="on">
+							<dl>
+								<dd class="name">张文科 <a href="#">删除地址</a> </dd>
+								<dd class="site"><span>四川省成都市高新区福年广场T222 525</span></dd>
+								<dd class="tel">13569855666</dd>
+							</dl>
+							<div class="icon">
+								<img src="../assets/images/1_07.png"/>
+							</div>
+						</li>
+						<li>
+							<dl>
+								<dd class="name">张文科 <a href="#">删除地址</a> </dd>
+								<dd class="site"><span>四川省成都市高新区福年广场T222 525</span></dd>
+								<dd class="tel">13569855666</dd>
+							</dl>
+							<div class="icon">
+								<img src="../assets/images/1_07.png"/>
+							</div>
+						</li>
+						<li class="add_li" id="add_adderss">
+							<img src="../assets/images/add.png" alt="" />
+							<div class="fz_14 fc_6">添加地址</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="order_list">
+				<div class="tag">
+					商品信息
+				</div>
+				<div class="order_list_con">
+					<div class="plane_msg">
+						<div class="plane_msg_top">
+							<span class="plane_address">
+								机场信息: 
+								<span>成都双流机场 </span>
+								<img src="../assets/images/arrow.png"/>
+								<span>上海虹桥机场</span>
+							</span>
+							<span>出行日期：2016-09-12 09:30</span>
+						</div>
+						<div class="plane_msg_con clear">
+							<div class="fl plane_msg_con_t">
+								<img src="../assets/images/index_list1.png" class="plane_img" alt="" />
+								<span>成都</span>
+								<img src="../assets/images/airplane_small.png" class="airplane_img" alt="" />
+								<span>重庆</span>
+								<span class="tag_highlight">包机</span>
+							</div>
+							<div class="fr">
+								<div class="fl plane_msg_con_item">
+									<span class="fc_9 fz_12">机型</span>
+									<div class="fz_14">湾流G550公务机</div>
+								</div>
+								<div class="fl plane_msg_con_item">
+									<span class="fc_9 fz_12">价格</span>
+									<div class="price">￥201.00</div>
+								</div>
+								<div class="fl plane_msg_con_item">
+									<span class="fc_9 fz_12">数量</span>
+									<div class="fz_14">6座</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="plane_man">
+						<div class="plane_man_t">
+							选择乘机人：
+						</div>
+						<ul>
+							<li class="plane_man_li">
+								<span class="plane_name">耶耶耶</span>
+								<span class="plane_phone">13241244344</span>
+								<a class="shanc"><img src="../assets/images/shanchu.png"/></a>
+							</li>
+							<li class="plane_man_li">
+								<span class="plane_name">耶耶耶</span>
+								<span class="plane_phone">13241244344</span>
+								<a class="shanc"><img src="../assets/images/shanchu.png"/></a>
+							</li>
+							<li class="plane_man_li">
+								<span class="plane_name">耶耶耶</span>
+								<span class="plane_phone">13241244344</span>
+								<a class="shanc"><img src="../assets/images/shanchu.png"/></a>
+							</li>
+							<li class="plane_man_li">
+								<span class="plane_name">耶耶耶</span>
+								<span class="plane_phone">13241244344</span>
+								<a class="shanc"><img src="../assets/images/shanchu.png"/></a>
+							</li>
+							<li class="plane_man_li add_plane_man" id="add_plane_man">
+								<img src="../assets/images/add_man.png"/>
+								<span>添加乘机人</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="order_list">
+				<div class="tag">
+					支付方式
+				</div>
+				<div class="order_list_con">
+					
+					<!--有卡券时显示该数据，如果没有卡券，那么就不显示-->
+					<!--卡券star-->
+					<div class="code_box">
+						<p class="code_title">卡券</p>
+						<div class="code_list check_box">
+							<label class="radio_check on">
+								<input type="radio" name="type"/>
+								满1000减100
+							</label>
+							<label class="radio_check">
+								<input type="radio" name="type"/>
+								满2000减200
+							</label>
+						</div>
+					</div>
+					<!--卡券end-->
+					
+					<div class="code_box">
+						<p class="code_title">转账</p>
+						<ul class="code_list fc_6">
+							<li >
+								<span class="text_justify">开户行</span>
+								<span>：</span>
+								<span>中国建设银行高新区支行</span>
+							</li>
+							<li >
+								<span class="text_justify">开户名</span>
+								<span>：</span>
+								<span>中国建设银行高新区支行</span>
+							</li>
+							<li >
+								<span class="text_justify">账号</span>
+								<span>：</span>
+								<span>中国建设银行高新区支行</span>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="code_box">
+						<p class="code_title">买家留言：</p>
+						<ul class="code_list fc_6">
+							<textarea name="" rows="3" cols="" maxlength="50" placeholder="选填，可填写您的要求（50字以内）"></textarea>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!--提交-->
+			<div class="sub_box">
+				<span>订单金额：<span class="fc_f00">￥51516.00</span></span>
+				<button type="button" class="sub_btn">立即购买</button>
+			</div>
+		</div>
+		
+		<!--弹出框star(添加乘机人)-->
+		<div class="prop_box" id="prop_man_box">
+			<div class="prop_con" id="prop_man_con">
+				<ul>
+					<li class="prop_li tishi">所填信息务必真实，登机时人证一致方可登机</li>
+					<li class="prop_li fc_3">新增乘机人</li>
+					<li class="prop_li">
+						<span>类型</span>
+						<span class="">
+							<label class="radio_check on" data-age="man">
+								<input type="radio" name="age"/>
+								成人
+							</label>
+							<label class="radio_check" data-age="child">
+								<input type="radio" name="age"/>
+								儿童
+							</label>
+							<label class="radio_check" data-age="baby">
+								<input type="radio" name="age"/>
+								婴儿
+							</label>
+						</span>
+						<div class="text_msg" id="msg">
+							<!--2周岁及其以上的未成年人，乘机需要提供户口簿-->
+						</div>
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">姓名</span>
+						<input type="text" placeholder="请填写您的真实姓名" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">身份证(或护照)</span>
+						<input type="text" placeholder="请填写您的身份证(或护照)" />
+					</li>
+					<li class="prop_li no_baby">
+						<span class="text_justify">手机</span>
+						<input type="text" placeholder="请填写您的手机号" />
+					</li>
+					<li class="prop_li baby">
+						<span class="text_justify">监护人姓名</span>
+						<input type="text" placeholder="请填写监护人姓名" />
+					</li>
+					<li class="prop_li baby">
+						<span class="text_justify">监护人手机</span>
+						<input type="text" placeholder="请填写监护人的手机号" />
+					</li>
+				</ul>
+				<div class="add_box">
+					<button class="add_btn" id="add_man_btn">添加</button>
+				</div>
+				
+			</div>
+		</div>
+		<!--弹出框end(添加乘机人)-->
+		<!--弹出框star(添加地址)-->
+		<div class="prop_box" id="prop_address_box">
+			<div class="prop_con" id="prop_address_con">
+				<ul>
+					<li class="prop_li fc_3">新增收货地址</li>
+					<li class="prop_li">
+						<span class="text_justify">收货人</span>
+						<input type="text" placeholder="请填写收货人姓名" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">收货地址</span>
+						<select class="select">
+							<option>省/直辖市</option>
+						</select>
+						
+						<select class="select">
+							<option>市</option>
+						</select>
+						
+						<select class="select">
+							<option>区/县</option>
+						</select>
+						
+						<select class="select">
+							<option>乡镇/街道</option>
+						</select>	
+						
+					</li>
+					<li class="prop_li">
+						<span class="text_justify"></span>
+						<input type="text" placeholder="请填写您的详细地址" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">手机号</span>
+						<input type="text" placeholder="请填写您的手机号" />
+					</li>
+					<li class="prop_li">
+						<span class="text_justify">邮政编码</span>
+						<input type="text" placeholder="请填写邮政编码" />
+					</li>
+				</ul>
+				<div class="add_box">
+					<button class="add_btn" id="add_address_btn">添加</button>
+				</div>
+				
+			</div>
+		</div>
+		<!--弹出框end(添加地址)-->
+		
+		
+		<!--页脚-->
+		<div class="footer w_all">
+			<div class="w_con clear">
+				<div class="fl footer_left">
+					<img src="../assets/images/logo.png" alt="" />
+					<ul class="qr_box">
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="fr clear footer_right">
+					<dl class="fl">
+						<dt>租机说明</dt>
+						<dd><a href="">服务时间</a></dd>
+						<dd><a href="">租机资格</a></dd>
+						<dd><a href="">取还机说明</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>企业服务</dt>
+						<dd><a href="">用机统计</a></dd>
+						<dd><a href="">用机人管理</a></dd>
+						<dd><a href="">企业信息</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>我的账号</dt>
+						<dd><a href="">我的行程</a></dd>
+						<dd><a href="">个人资料</a></dd>
+						<dd><a href="">常用地址</a></dd>
+						<dd><a href="">服务评价</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>关于我们</dt>
+						<dd><a href="">联系我们</a></dd>
+						<dd><a href="">计价系统</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="w_all">
+			<div class="w_con footer_b">
+				<div class="copy_box">
+					<p>蜀ICP备15015521号-2 </p>
+					<p>&copy;2009-2016 scshuxun.com All Rights Reserved.</p>
+				</div>
+				<div class="copy_img">
+					<img src="../assets/images/xin.png"/>
+					<img src="../assets/images/logo_hui.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../assets/js/check.js" ></script>
+	<script src="../assets/js/ljk.js"></script>
+	<script>
+		window.onload = function(){
+			//选框美化
+			$('.radio_check').CheckBox(CheckBoxCall);
+			//点击添加乘机人，弹出添加弹框
+			listFun.addManProp();
+			//点击添加地址，弹出添加弹框
+			listFun.addAddressProp();
+		}
+	</script>
+</html>

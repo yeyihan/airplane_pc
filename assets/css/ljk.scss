@@ -1,0 +1,1296 @@
+@charset "utf-8";
+@import"main";
+
+
+//左边，右边固定宽度，中间自适应
+@mixin Posi_lmr($wid_l,$padd,$wid_r){
+    position: relative;
+    padding-left: $wid_l+2*$padd;
+    padding-right: $wid_r+2*$padd;
+    >.posi_l{
+        width:$wid_l;
+        height:$wid_l;
+        position: absolute;
+        top:$padd;
+        left:$padd;
+    }
+    >.posi_m{
+        width:100%;
+    }
+    >.posi_r{
+        width:$wid_r;
+        position: absolute;
+        top:$padd;
+        right:$padd;
+    }
+}
+
+button{
+    font-size: 18px;
+}
+//首页三行列表
+.list_box{
+    overflow: hidden;
+    width:1120px;
+    .list_ul{
+        width:1300px;
+        .list_li_3{
+            width:350px;
+            margin-right:35px;
+            margin-top:30px;
+            float:left;
+            overflow: hidden;
+            box-sizing: border-box;
+            border:1px solid #e0e0e0;
+        }
+        .list_img{
+            width:350px;
+            height:350px;
+        }
+        .list_li_con{
+            padding: 20px;
+            border-top:1px dotted #e0e0e0;
+        }
+        .text_m{
+            margin:5px 0 10px;
+        }
+        .list_li_btn{
+            padding:8px 18px;
+            font-size: 16px;
+            color:#fff;
+            background-color: #089cef;
+        }
+    }
+    
+    .img_box{
+        position: relative;
+        .img_title{
+            position: absolute;
+            width:66px;
+            height:66px;
+            line-height: 66px;
+            text-align: center;
+            color:#fff;
+            right:20px;
+            top:260px;
+            background: url(../images/tuoyuan.png) no-repeat;
+        }
+    }
+    .img_air{
+        padding:20px;
+        img{
+            margin: 0 20px;
+        }
+    }
+}
+//无人机租赁三行列表
+.lease_con_list{
+    overflow: hidden;
+    width:1200px;
+    box-sizing: border-box;
+    .list_ul{
+        width:1300px;
+        margin-left: -1px;
+        .list_li_3{
+            width:387.4px;
+            margin-right:20px;
+            margin-top:20px;
+            float:left;
+            overflow: hidden;
+            box-sizing: border-box;
+            border:1px solid #e0e0e0;
+        }
+    }
+    .list_img{
+        width:100%;
+        height:416px;
+        line-height: 416px;
+        text-align: center;
+        overflow: hidden;
+        border-bottom: 1px solid #e9e9e9;
+        img{
+            max-width: 100%;
+        }
+    }
+    .text_name{
+        padding:7px 20px;
+        color:#333;
+        height:60px;
+        box-sizing: border-box;
+        line-height: 1.3;
+    }
+    .text_price{
+        height: 60px;
+        padding:0 20px;
+        line-height: 60px;
+        font-size: 22px;
+        color:#FF0000;
+        border-top:1px dotted #c3c3c3;
+        border-bottom:1px dotted #c3c3c3;
+        small{
+            font-size: 18px;
+        }
+    }
+    .text_msg{
+        padding:0px 20px;
+        height:50px;
+        line-height: 50px;
+        color:#666;
+        span:first-child{
+            padding-right:10px;
+            margin-right:10px;
+            border-right:1px solid #666;
+            line-height: .9;
+            display: inline-block;
+        }
+    }
+}
+
+
+//输入加减数量组件
+.numbox{
+    @include Posi_lmr(30px,0,30px);
+    overflow: hidden;
+    display: inline-block;
+    width:60px;
+    border:1px solid #dddddd;
+    height:30px; 
+    .numbox_minus,.numbox_plus{
+        border-radius: 0;
+        height:30px;
+        border:none;
+        background-color: transparent;
+        color:#a0a0a0;
+        font-size: 18px;
+        outline: none;
+        cursor: pointer;
+    }
+    .numbox_minus{
+        border-right:1px solid #dddddd;
+    }
+    .numbox_plus{
+        border-left:1px solid #dddddd;
+    }
+    .input_num{
+        border:none;
+        border-radius: 0;
+        height:30px;
+        text-align: center;
+    }
+}
+
+.tag_highlight{
+    background-color: #f06000;   
+    border-radius: 3px;
+    color:#fff; 
+    font-size: 12px;
+    vertical-align: middle;
+    padding:2px 5px;
+}
+
+//套餐选择按钮
+.fees_btn{
+    position: relative;
+    border:1px solid #d9d9d9;    
+    border-radius: 2px;
+    width:160px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    color:#666;
+    margin-right: 10px;
+    background-color: #fff;
+    img{
+        position: absolute;
+        right:-1px;
+        bottom:0;
+        display: none;
+    }
+}
+.fees_btn.active{
+    border:2px solid #feda7c;
+    img{
+        display: block;
+    }
+}
+/********************************
+ * Login/sign.html(登录注册页面)
+ * ******************************/
+#sign{
+    .content{
+        background: #ddf0f4;
+        padding:100px 0;
+    }
+    .list_sign{
+        padding:30px 55px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    .benner_box{
+        margin-top: 30px;
+    }
+    .test_box{
+        color:#ef4848;
+        height:18px;
+        .msg{
+            display: none;
+            background: url(../images/warning.png) no-repeat;
+            padding-left:38px;
+            margin-left: 20px;
+            line-height: 1;
+        }
+        
+        img{
+            margin: 0 20px;
+            vertical-align: text-top;
+        }
+    }
+    .list_li{
+        border:1px solid #e5e5e5;
+        height:58px;
+        line-height: 58px;
+        margin:20px 0;
+        width:390px;
+        .img_box{
+            width:58px;
+            text-align: center;
+            line-height: 58px;
+            
+        }
+        .input_clear{
+            float:left;
+            font-size: 20px;
+            width:330px;
+            input{
+                border:none;
+            }
+        }
+        .test_input{
+            width:216px;
+        }
+        .test_code_box{
+            height:58px;
+            width:116px;
+            overflow: hidden;
+            img{
+                vertical-align: top;
+            }
+        }
+    }
+    .list_li.active{
+        border-color:#f04949;
+    }
+    .text_box{
+        border:none;
+        font-size: 0;
+        input[type="checkbox"]{
+            visibility: hidden;
+            width:0;
+        }
+        
+        .sign_label{
+            font-size:18px;
+            padding-left: 30px;
+            position:relative; 
+            &:before{
+                content: "";
+                position: absolute;
+                top:0;
+                left:0;
+                width:20px;
+                height:20px;
+                border:1px solid #e5e5e5;
+            }
+        }
+        .sign_label.on,.sign_label.active{
+            &:before{
+                background: url(../images/checked.png) no-repeat;
+            }
+        }
+        a{
+            color:#0099ff;
+        }
+    }
+    
+    .sub_li{
+        border:none;
+        .btn{
+            width:100%;
+            height:100%;
+            background-color: #ffda7c;
+            color:#333;
+            font-size: 24px;
+        }
+    }
+    
+    //注册页面样式
+    #register{
+        .benner_box{
+            margin-top:65px;
+        }
+        .code_btn{
+            width:100%;
+            height:60px;
+            margin-top: -5px;
+            background-color: #ffda7c;
+            color:#333;
+            font-size: 18px;
+        }
+        .code_li{
+            width:264px;
+            position: relative;
+            .test_input{
+                width: 206px;
+            }
+        }
+        .test_code_box{
+            position: absolute;
+            border:1px solid #FFDA7C;
+            background-color: #ffda7c;
+            top:-1px;
+            right:-126px;
+        }
+    }
+}
+
+/**************************
+ * index  首页
+ * ***********************/
+#index{
+    .index_tag_box{
+        margin:25px 0;
+        overflow: hidden;
+    }
+    .index_tag_ul{
+        width:1300px;
+    }
+    .index_tag{
+        margin-right:13px;
+        background-color: #fff;
+        width:290px;
+        .tag_top{
+            width:100%;
+            height:120px;
+            padding:20px;
+            color:#fff;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            font-size: 12px;
+            .tag_title{
+                font-size: 20px;
+                line-height: 2;
+            }
+        }
+        .tag1{
+            background-image: url(../images/tag_1.png);
+        }
+        .tag2{
+            background-image: url(../images/tag_2.png);
+        }
+        .tag3{
+            background-image: url(../images/tag_3.png);
+        }
+        .tag4{
+            background-image: url(../images/tag_4.png);
+        }
+        .tag_bot{
+            padding:10px 20px;
+            box-sizing: border-box;
+            font-size: 12px;
+            color:#333;
+            @include Triangle(10px,10px,#fff,top);
+            &:before{
+                left:80px;
+            }
+            .text_ellipsis2{
+                display: inline-block\0;  /*为避免覆盖其他浏览器的弹性盒模型，这里用ie8hack对ie8进行处理*/
+                height:34px;
+            }
+        }
+    }
+    
+    //租赁
+    .index_con_box{
+        margin-top: 25px;
+        background-color: #fff;
+        .w_con{
+            padding:80px 40px 50px;
+            box-sizing: border-box;
+        }
+        
+    }
+    .lease_title_box{
+        text-align: center;
+        color:#13252;
+        font-size: 36px;
+        .lease_title_eng{
+            font-size: 22px;
+            color:#999;
+        }
+    }
+    
+    .lease_slide_box{
+        .bd{
+            text-align: center;
+            img{
+                width:500px;
+                height:500px;
+            }
+        }
+        .slide_btn{
+            position: absolute;
+            width:60px;
+            height:60px;
+            top:50%;
+            margin-top:-30px;
+        }
+        .prev{
+            left:0;
+            
+            background: url(../images/slide_prev.png) no-repeat;
+        }
+        .next{
+            right:0;
+            background: url(../images/slide_next.png) no-repeat;
+        }
+    }
+ 
+    .lease_con{
+        width: 700px;
+        margin:0 auto;
+        small{
+            font-size: 60%;
+        }
+    }   
+    .lease_p{
+        margin:10px 0;
+    }
+    .lease_btn_box{
+        text-align: center;
+    }
+    .lease_btn{
+        padding:15px 30px;
+        background-color: #089cef;
+        color:#fff;
+        font-size: 40px;
+        margin:50px auto 0;
+    }
+    
+    .list_top{
+        border-left: 4px solid #089cef;
+        font-size: 24px;
+        color:#444;
+        line-height: 2;
+        padding-left: 20px;
+
+    }
+    
+    //主体部分最下面部分
+    .index_con_b.index_con_box{
+        .w_con{
+            padding:80px 0px 50px;
+            //改变宽度是为了处理图片
+            width:1202px;
+        }
+    }
+    .index_con_img_box{
+        border:1px solid #e0e0e0;
+    }
+    .index_con_img_b{
+        overflow: hidden;
+        width:296px;
+        height:296px;
+    }
+    .index_con_img_small{
+        width:608px;
+        li{
+            width:304px;
+            height:148px;
+            overflow: hidden;
+        }
+    }
+}
+
+
+/*********************************************
+ * uav/goods_detail.html(商品详情)
+ * ******************************************/
+#goods_detail{
+    //上面部分
+    .con_top{
+        padding:30px 20px 10px;
+        background-color: #fff;
+    }
+    //左边部分
+    .goods_photo_box{
+        width:500px;
+        .prev,.next{
+            position: absolute;
+            top:0;
+            cursor: pointer;
+        }
+        .prev{
+            left:0;
+        }
+        .next{
+            right:0;
+        }
+    }
+    .goods_photo_big{
+        width:500px;
+        height:500px;
+        line-height: 500px;
+        text-align: center;
+        overflow: hidden;
+        img{
+            max-width: 100%;
+        }
+    }
+    
+    .goods_photo_list{
+        margin-top:10px;
+        position: relative;
+        padding:0 47px;
+    }
+    
+    .photo_list_box{
+        width:407px;
+        overflow: hidden;
+    }
+    .ph_ul{
+        white-space: nowrap;
+        font-size: 0;
+    }
+    .ph_li{
+        width:75px;
+        height:75px;
+        box-sizing: border-box;
+        border:1px solid #f0f0f0;
+        margin-right: 8px;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .ph_li.active{
+        border-color: #ffd97f;
+    }
+    //右边部分
+    .con_top_r{
+        margin-left:30px;
+        width:630px;
+    }
+    .goods_name{
+        margin-top:20px;
+        h2{
+            color:#444;
+        }
+        p{
+            color:#B2B2B2;
+            font-size: 14px;
+        }
+    }
+    .goods_msg_box{
+        @include Triangle(12px,12px,#f6f6f6,top);
+        &:before{
+            left:60px;
+        };
+        position:relative;
+        border-radius: 5px;
+        font-size:14px;
+        color:#aeaeae;
+        background-color: #f6f6f6;
+        margin-top:30px;
+        padding:20px 15px;
+        .goods_price{
+            font-size: 30px;
+            color:#FF0000;
+            margin-bottom: 10px;
+            small{
+                font-size: 60%;
+            }
+        }
+        .goods_msg_r{
+            position: absolute;
+            right:15px;
+            top:20px;
+            line-height: 1;
+            .left{
+                display: inline-block;
+                padding-right:10px;
+                margin-right:10px;
+                border-right: 1px solid #aeaeae;
+            }
+        }
+    }
+    .goods_item{
+        font-size: 16px;
+        color:#666;
+        margin:20px 0;
+        .ziti{
+            display: inline-block;
+            padding-left:20px;
+            line-height: 1;
+            background: url(../images/ziti.png) no-repeat;
+        }
+        .kuaidi{
+            display: inline-block;
+            margin-left:20px;
+            padding-left:24px;
+            line-height: 1;
+            background: url(../images/kuaidi.png) no-repeat;
+        }
+    }
+    .goods_address{
+        position:relative; 
+        &:before{
+            position: absolute;
+            content: "";
+            left:0;
+            right:0;
+            bottom: -20px;
+            border-bottom: 1px dotted #dadada;
+        }
+    }
+    .selet_address{
+        width:170px;
+        height:40px;
+        color:#666;
+    }
+    .goods_address_kuaidi{
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .line_bottom{
+        margin-top:40px;
+    }
+    
+    
+    .numbox{
+        top:10px;
+    }
+    .num_span{
+        font-size: 18px;
+        color:#ccc;
+        margin-left:10px;
+    }
+    .zuji_btn_box{
+        text-align: center;
+        margin-top:50px;
+    }
+    .zuji_btn{
+        background-color: #049ff1;
+        color:#fff;
+        border-radius: 3px;
+        width:344px;
+        height:48px;
+        img{
+            vertical-align: -2px;
+        }
+    }
+    
+    //下面评论等
+    .con_body{
+        margin:24px 0;
+    }
+    .visited{
+        width:287px;
+        border:1px solid #e9e9e9;
+        box-sizing: border-box;
+        background-color: #fff;
+        h5{
+            text-align: center;
+            font-size: 16px;
+            color:#333;
+            height:54px;
+            line-height: 54px;
+            border-bottom: 1px solid #E9E9E9;
+        }
+    }
+    .goods_l_box{
+        padding:30px 0;
+        text-align: center;
+        img{
+            width:260px;
+            height:180px;
+        }
+    }
+    .goods_l_p{
+        font-size: 14px;
+        color:#333;
+        border-bottom: 1px dotted #f4f4f4;
+        padding:10px 15px;
+    }
+    .visited_price{
+        border-bottom: 1px solid #e8e8e8;
+        padding:10px 15px;
+        font-size: 16px;
+        color:#FF0000;
+    }
+    
+    .goods_con_box{
+        background-color: #fff;
+        width:898px;
+        box-sizing: border-box;
+        border: 1px solid #e9e9e9;
+        margin-left:15px;
+        font-size: 16px;
+    }
+    .goods_con_nav{
+        border-bottom: 2px solid #e9e9e9;
+        height:54px;
+    }
+    .goods_nav_btn{
+        text-align: center;
+        color:#333;
+        width:162px;
+        height:54px;
+        line-height: 54px;
+        border-right:1px solid #e9e9e9;
+        border-bottom:2px solid #e9e9e9;
+        cursor: pointer;
+    }
+    .goods_nav_btn.active{
+        border-bottom-color: #feda7c;
+        color:#FEDA7C;
+    }
+    .goods_con{
+        padding:20px;
+        display: none;
+        
+    }
+    .goods_con_top{
+        border:1px solid #e9e9e9;
+        .goods_con_li{
+            height:50px;
+            line-height: 50px;
+            padding:0 20px;
+            &:first-child{
+                border-bottom: 1px solid #e9e9e9;
+            }
+            select{
+                height: 25px;
+            }
+        }
+        .check_box{
+            height:50px;
+            line-height: 50px;
+            margin-left: -7px;
+        }
+    }
+    
+    .goods_con.active{
+        display: block;
+    }
+    .detail_img > img{
+        width:100%;
+    }
+    
+    //评论部分
+    .goods_comment{
+        padding:0 20px;
+    }
+    .goods_comment_li{
+        border-top:1px solid #e9e9e9;
+        padding:30px 0;
+        &:first-child{
+            border-top:none;
+        }
+    }
+    .goods_comment_top{
+        color:#999;
+    }
+    .man_header{
+        width:90px;
+        min-height:100px;
+        margin-right:10px;
+        text-align: center;
+        .header_img{
+            width:66px;
+            height:66px;
+        }
+        p{
+            margin-top:10px;
+        }
+    }
+    .goods_comment_con{
+        width:716px;
+        line-height: 1.8;
+    }
+    .comment_con_top{
+        padding: 10px 0;
+    }
+    .comment_pic_ul{
+        margin:20px 0 10px;
+        .comment_pic_li{
+            border:1px solid #e9e9e9;
+            border-radius: 5px;
+            margin-right:10px;
+            margin-bottom: 10px;
+        }
+        .comment_pic_li.active{
+            border:1px solid #0084fa;
+            @include Triangles(8px,5px,#fff,#0084fa,bottom);
+        
+        }
+    }
+    .goods_pic_box{
+        border:1px solid #e9e9e9;
+    }
+    .handle_box{
+        margin:10px 0;
+        padding: 5px 20px;
+        .handle_li{
+            border-left:1px solid #0084fa;
+            margin-left:10px;
+            padding-left:10px;
+            cursor: pointer;
+            line-height: 1.1;
+            color:#0084fa;
+            font-size: 14px;
+            &:first-child{
+                border-left: none;
+                margin-left:0px;
+                padding-left:0px;
+            }
+        }
+    }
+    .pinlun_big_box{
+        text-align: center;
+        height:380px;
+        line-height: 380px;
+    }
+}
+
+/*********************************************
+ * uav/lease.html(无人机租赁)
+ * ******************************************/
+#lease{
+    .lease_con{
+        margin:20px auto;
+    }
+    .screen_box{
+        background-color: #fff;
+        border:1px solid #e5e5e5;
+        box-sizing: border-box;
+    }
+    .screen_li{
+        border-top:1px solid #E5E5E5;
+        &:first-child{
+            border-top:none;
+        }
+    }
+    .screen_title{
+        width:120px;
+        text-align: right;
+        color:#666;
+        padding-right: 20px;
+        box-sizing: border-box;
+        height:60px;
+        line-height: 60px;
+    }
+    .screen_con{
+        width:1078px;
+        color:#333;
+        .input_box{
+            display: inline-block;
+            input{
+                width:50px;
+                text-align: center;
+                color:#333;
+                padding:5px 10px;
+            }
+        }
+    }
+    .li_btn{
+        display: inline-block;
+        padding:8px 10px ;
+        line-height: 1;
+        margin:12px;
+        cursor: pointer;
+        .shanc{
+            display: none;
+        }
+    }
+    .li_btn_first.active.li_btn{
+        color: #ffb700;
+        background-color: rgba(0,0,0,0);
+        border:none;
+        .shanc{
+            margin-left: 0;
+        }
+    }
+    .active.li_btn{
+        background-color: #f4f4f4;
+        border:1px solid #e5e5e5;
+        box-sizing: border-box;
+        cursor: auto;
+        .shanc{
+            margin-left:10px;
+            display: inline;
+            cursor: pointer;            
+        }
+    }
+    .screen_r{
+        width:140px;
+        text-align: center;
+        height:60px;
+        line-height: 60px;
+        a{
+            cursor: pointer!important;
+        }
+        .li_btn{
+            width:74px;
+        }
+    }
+    
+    //主体内容，下面的列表
+    .con_list{
+        margin-top:20px;
+        border:1px solid #e9e9e9;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+}
+
+/******************************************
+ * order/order_detail.html（通用航空订单）、order/order_uav.html(无人机订单)
+ * ***************************************/
+#order_detail{
+    //通用航空
+    .order_con{
+        margin: 20px auto;
+        padding: 40px;
+        background-color: #fff;
+        h4{
+            font-size: 24px;
+            color:#333;
+            margin-bottom: 40px;
+        }
+    }
+    .address_list li {
+        cursor: pointer;
+    }
+    .add_li{
+        background-image: none;
+        text-align: center;
+        img{
+            margin-top:70px;
+        }
+    }
+    
+    .tag{
+        background-color: #fafafa;
+        font-size: 20px;
+        height:50px;
+        line-height: 50px;
+        border-left:8px solid #ffcc00;
+        padding-left:23px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .order_list{
+        margin-bottom:60px;
+        .order_list_con{
+            padding-left: 20px;
+            box-sizing: border-box;
+            
+        }
+    }
+    
+    .plane_msg{
+        border-bottom: 1px dotted #e9e9e9;;
+    }
+    .plane_msg_top{
+        font-size: 16px;
+        color:#333;
+        line-height: 2;
+    }
+    .plane_address{
+        margin-right:200px;
+        img{
+            vertical-align: 3px;
+            margin:0 10px;
+        }
+    }
+    .plane_msg_con{
+        margin:10px 0 20px;
+        color:#333;
+        height:80px;
+    }
+    .plane_msg_con_t{
+        font-size: 14px;
+        .plane_img{
+            width:80px;
+            height:80px;
+            margin-right:10px;
+        }
+        .airplane_img{
+            margin:0 10px;
+        }
+        .tag_highlight{
+            margin-left:10px;
+        }
+    }
+    .plane_msg_con_item{
+        text-align: center;
+        padding:16px 50px;
+        .price{
+            color:#FF0000;
+            font-size: 16px;
+        }
+    }
+    
+    .plane_man{
+        padding:20px 0 0;
+    }
+    .plane_man_li{
+        display: inline-block;
+        width:358px;
+        box-sizing: border-box;
+        margin-right:30px;
+        margin-top: 20px;
+        font-size: 14px;
+        height:60px;
+        line-height: 58px;
+        border:1px solid #f3f3f3;
+        padding:0 10px;
+        background-color: #fffdf9;
+        .plane_name{
+            background: url(../images/1_09.png) no-repeat;
+            padding-left: 20px;
+            display: inline-block;
+            width:80px;
+            line-height: 1;
+        }
+        .plane_phone{
+            background: url(../images/1_11.png) no-repeat;
+            padding-left: 20px;
+            display: inline-block;
+            line-height: .9;
+            margin-left:40px;
+        }
+        .shanc{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+            margin-left:50px;
+        }
+    }
+    .add_plane_man.plane_man_li{
+        padding-left: 20px;
+        background-color: #f9f9f9;
+        color:#0099ff;
+        cursor: pointer;
+        img{
+            margin-right:15px;
+            vertical-align: -2px;
+        }
+    }
+    .code_box{
+        font-size: 16px;
+    }
+    .code_title{
+        color:#0099ff;
+        margin:50px 0 20px;
+    }
+    .check_box.code_list{
+        padding-left:50px;
+    }
+    .code_list{
+        background-color: #f9f9f9;
+        height: auto;
+        line-height: 1.4;
+        margin-left: 0px;
+        float: none;
+        padding:20px 20px 20px 25px;
+        .radio_check{
+            display: block;
+            margin:20px 0;
+            line-height: 1.2;
+            color:#333;
+        }
+        input{
+            display: none;
+        }
+        textarea{
+            width:100%;
+            line-height: 1.4; 
+            border:none;
+            background-color: #f9f9f9;
+        }
+        .text_justify{
+            width:48px;
+        }
+    }
+    
+    .sub_box{
+        position: relative;
+        text-align: center;
+        height:60px;
+        line-height: 60px;
+        color:#333;
+        background-color: #fff1cd;    
+        .sub_btn{
+            position: absolute;
+            background-color: #0099ff;
+            color:#fff;
+            right:0;
+            top:0;
+            bottom: 0;
+            width:290px;
+        }
+    }
+    
+    
+    //弹出框
+    .prop_box{
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: none;
+        filter:progid:DXImageTransform.Microsoft.gradient(enabled="true", startColorstr="#7F000000", endColorstr="#7F000000");
+        background-color:rgba(0,0,0,0.5);
+        .prop_con{
+            background-color: #fff;
+            padding:0 20px;
+            width:650px;
+            margin:150px auto 0;
+        }
+        .tishi.prop_li{
+            font-size: 12px;
+            color:#999;
+            padding-top:60px;
+            padding-bottom: 20px;
+        }
+        .prop_li.baby{
+            display: none;
+        }
+        .prop_li{
+            box-sizing: border-box;
+            padding:20px 10px;
+            border-bottom: 1px solid #f4f4f4;
+            font-size:16px;
+            color:#666; 
+            .radio_check{
+                margin-left: 100px;
+            }
+            .radio_check:before{
+                background: url(../images/check_blue.png);
+                background-size: 18px 18px;
+                width:18px;
+                height:18px;
+                top:-1px;
+            }
+            .radio_check.on:before{
+                background: url(../images/checked_blue.png);
+                background-size: 18px 18px;
+            }
+            input[type="text"]{
+                border:none;
+                padding-left:20px;
+                width:460px;
+                color:#666;
+                line-height: 1.4;
+                font-size: 14px;
+            }
+            .text_justify{
+                width:140px;
+            }
+            
+        }
+        .text_msg{
+            position: relative;
+            top:10px;
+            font-size: 12px;
+            color:#ff5400;
+        }
+        .add_box{
+            padding:50px 0;
+            text-align: center;
+        }
+        .add_btn{
+            width:500px;
+            height:50px;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            font-size: 18px;
+            color:#333;
+        }
+        select{
+            width:100px;
+            height:30px;
+            margin-left: 10px;
+        }
+    }
+    
+    //无人机
+    .two_text{
+        display: inline-block;
+        width:600px;
+        vertical-align: middle;
+    }
+    .numbox{
+        top:24px;
+        margin-left:120px;
+    }
+    .fees_btn{
+        width:330px;
+        height:60px;
+        font-size: 20px;
+    }
+    .fees_btn.active{
+        color:#feda7c;
+    }
+    .tishi_box{
+        @include Triangle(5px,15px,#56bbff,left);
+        margin-left:30px;
+        background-color: #56bbff;
+        padding:10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        color:#fff;
+        span{
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+    .explain{
+        font-size: 16px;
+        color:#ff5400;
+        margin-left:20px;
+        vertical-align: top;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

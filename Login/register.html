@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="四川蜀讯科技有限公司" />
+		<meta name="copyright" content="wwww.scshux.com" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>注册</title>
+		
+		<!--页面样式 star-->
+		<link rel="stylesheet" type="text/css" href="../assets/css/ljk.css"/>
+		<!--页面样式 end-->
+		
+		<!--公共 js star-->
+		<script src="../assets/libs/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--公共 js end-->
+	</head>
+	<body id="sign">
+		<!--头部star-->
+		<div class="w_all header_box">
+			<div class="w_con">
+				<div class="header clear">
+					<img src="../assets/images/logo.png" class="fl logo"/>
+					<div class="fl header_text_l">
+						<span>欢迎注册约飞！</span>
+					</div>
+					<div class="fr header_text_r">
+						<span>已有账号，去</span><a href="">登录></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--头部end-->
+		
+		<div class="w_all content" id="register">
+			<div class="w_con con_m clear">
+				<div class="fl benner_box">
+					<img src="../assets/images/login_benner.png"/>
+				</div>
+				<form action="">
+					<div class="fr list_sign">
+						<div class="test_box">
+							<span id="msg" class="msg">该账号不存在！</span>
+						</div>
+						<ul>
+							<li class="list_li clear">
+								<div class="fl img_box">
+									<img src="../assets/images/phone.png"/>
+								</div>
+								<div class="input_clear fl">
+									<input type="text" placeholder="请输入手机号" id="phone_code"/>
+								</div>
+							</li>
+							<li class="list_li clear">
+								<div class="fl img_box">
+									<img src="../assets/images/pwd.png"/>
+								</div>
+								<div class="input_clear fl">
+									<input type="password" placeholder="请设置密码" id="pwd"/>
+								</div>
+							</li>
+							<li class="list_li clear">
+								<div class="fl img_box">
+									<img src="../assets/images/pwd.png"/>
+								</div>
+								<div class="input_clear fl">
+									<input type="password" placeholder="请再次输入密码" id="pwd_repeat"/>
+								</div>
+							</li>
+							<li class="list_li code_li clear">
+								<div class="fl img_box">
+									<img src="../assets/images/key.png"/>
+								</div>
+								<div class="input_clear test_input fl">
+									<input type="text" placeholder="请输入短信验证码" id="test_code"/>
+								</div>
+								<div class="test_code_box">
+									<button type="button" class="code_btn" id="code_btn">获取验证码</button>
+								</div>
+							</li>
+							<li class="list_li text_box clear">
+								<div class="fl checked_ie">
+									<input type="checkbox" name="" id="sign_check" value=""  checked="checked"/>
+									<label for="sign_check" class="sign_label">我已阅读并同意<a href="">《约飞用户协议》</a></label>
+								</div>
+							</li>
+							<li class="list_li sub_li clear">
+								<button class="btn" type="submit">注册</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+		
+		<!--页脚-->
+		<div class="footer w_all">
+			<div class="w_con clear">
+				<div class="fl footer_left">
+					<img src="../assets/images/logo.png" alt="" />
+					<ul class="qr_box">
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+						<li class="qr_li">
+							<img src="../assets/images/qr_code.png" alt="" />
+							<div>
+								约飞公众号
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="fr clear footer_right">
+					<dl class="fl">
+						<dt>租机说明</dt>
+						<dd><a href="">服务时间</a></dd>
+						<dd><a href="">租机资格</a></dd>
+						<dd><a href="">取还机说明</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>企业服务</dt>
+						<dd><a href="">用机统计</a></dd>
+						<dd><a href="">用机人管理</a></dd>
+						<dd><a href="">企业信息</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>我的账号</dt>
+						<dd><a href="">我的行程</a></dd>
+						<dd><a href="">个人资料</a></dd>
+						<dd><a href="">常用地址</a></dd>
+						<dd><a href="">服务评价</a></dd>
+					</dl>
+					<dl class="fl">
+						<dt>关于我们</dt>
+						<dd><a href="">联系我们</a></dd>
+						<dd><a href="">计价系统</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="w_all">
+			<div class="w_con footer_b">
+				<div class="copy_box">
+					<p>蜀ICP备15015521号-2 </p>
+					<p>&copy;2009-2016 scshuxun.com All Rights Reserved.</p>
+				</div>
+				<div class="copy_img">
+					<img src="../assets/images/xin.png"/>
+					<img src="../assets/images/logo_hui.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../assets/js/ljk.js"></script>
+	<script>
+		//输入框清空内容效果
+		tool.inputClear();
+		//多选框点击选中效果（因ie8不支持checked选择器，故用js处理）
+		tool.checkedIE();
+		//输入框获取焦点，对应输入框出现样式
+		listFun.listLiFocus();
+		//获取验证码之后的样式
+		listFun.getCode();
+		//表单验证（仅仅只做了为空的验证）
+		listFun.testFromInput();
+	</script>
+</html>

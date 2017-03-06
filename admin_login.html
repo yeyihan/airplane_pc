@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台登录</title>
+		<link rel="stylesheet" href="assets/css/login.css" />
+		<script>
+			function yzm(){
+				document.getElementById("yzms").style.display="block";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="login-head">
+			<div class="login-logo">
+				<a href="#"><img src="assets/images/admin_logo.png"></a>
+			</div>
+		</div>
+		<div class="login-box">
+			<div class="login-bg">
+				<!--配图-->
+				<div class="login-pic">
+					<img src="assets/images/admin_pic.png"/>
+				</div>
+				
+				<!--登录框-->
+				<div class="login-form">
+					<div class="login-form-head">
+						<span>商家管理中心</span>
+						<p>请输入您注册商铺申请的商家名称登录密码为商城用户通用密码</p>
+					</div>
+					<div class="login-form-box">
+						<form action="" name="login-form" method="post">
+							<ul>
+								<li class="login-form-name"><input type="text"></li>
+								<li class="login-form-psd"><input type="password"></li>
+								<li class="login-form-yzm"><input type="text" onfocus="yzm(this)"><img src="assets/images/yzm.jpg" id="yzms"></li>
+								
+							</ul>
+							<input type="submit" class="login-form-submit" value="商家登录">
+						</form>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="login-foot">
+			<div class="foot_l">
+				<p>蜀ICP备15015521号-2 </p>
+				<p>©2009-2016 scshuxun.com All Rights Reserved.  </p>
+			</div>
+			<div class="foot_r">
+				<img src="assets/images/foot_pic.png"/>
+				<img src="assets/images/logo_hui.png"/>
+			</div>
+		</div>		
+	</body>
+</html>
